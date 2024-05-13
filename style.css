@@ -31,11 +31,36 @@ body {
     box-shadow: 0px 50px 50px -20px rgb(53 18 122 / 49.72%);
 }
 
+.box {
+    display: none;
+}
+
+.illustration {
+    max-width: 21rem;
+    background-image: url(./images/illustration-woman-online-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    height: 15rem;
+    position: relative;
+    top: 6rem;
+    z-index: 1;
+}
+
+.pattern {
+    width: 100%;
+    position: relative;
+    top: 7rem;
+}
+
 h1 {
     font-family: Kumbh Sans;
     font-size: 32px;
     font-weight: 700;
     color: rgba(30, 31, 54, 1);
+    line-height: 36.69px;
+    text-align: center;
+    margin-bottom: 2.5rem;
 }
 
 h2 {
