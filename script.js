@@ -1,18 +1,16 @@
-const sectionArray = [...document.getElementsByClassName("section")];
 
-let openSection = null;
 
-sectionArray.forEach((section) => {
-    section.addEventListener("click", () => {
-        if (section == openSection) {
-            section.nextElementSibling.computedStyleMap.display = "none";
-            openSection = null;
+const questionsArray = document.querySelectorAll(".question-flex");
+
+questionsArray.forEach((question) =>
+    question.addEventListener("click", () => {
+        if (question.parentNode.classList.contains("active")) {
+            question.parentNode.classList.toggle("active");
         } else {
-            if (openSection != null) {
-                openSection.nextElementSibling.style.display = "none";
-            }
-            section.nextElementSibling.style.display = "block";
-            openSection = section;
+            questionsArray.forEach((question) =>
+                question.parentNode.classList.remove("active")
+            );
+            question.parentNode.classList.add("active");
         }
-    });
-});
+    })
+);
